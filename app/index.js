@@ -34,7 +34,7 @@ DefaultSeedGenerator.prototype.askUserFor = function askFor() {
 
 };
 
-MobileAppGenerator.prototype.app = function app() {
+DefaultSeedGenerator.prototype.app = function app() {
   this.log.ok('YEP ' + this.name);
   this.copy('index.html', 'www/index.html');
 };
