@@ -1,5 +1,5 @@
 {
-  "name": "default-seed",
+  "name": "generator-default-seed",
   "version": "0.0.0",
   "description": "a default project seed for generator-mobile-app",
   "main": "app/index.js",
