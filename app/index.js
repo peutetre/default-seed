@@ -30,6 +30,7 @@ DefaultSeedGenerator.prototype.askUserFor = function askFor() {
 
   this.prompt(prompts, function (props) {
     this.name = props.name;
+    cb();
   }.bind(this));
 
 };
