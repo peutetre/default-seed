@@ -8,8 +8,8 @@ var DefaultSeedGenerator = module.exports = function DefaultSeedGenerator(args, 
 
   this.on('end', function () {
     this.installDependencies({
-        npm: false,
-        bower: false
+        skipInstall: true,
+        skipMessage: ''
     });
   });
 
