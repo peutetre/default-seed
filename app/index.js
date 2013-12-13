@@ -9,21 +9,18 @@ var DefaultSeedGenerator = module.exports = function DefaultSeedGenerator(args, 
   this.on('end', function () {
     this.installDependencies({
         skipInstall: true,
-        skipMessage: true,
-        callback: function () {
-            console.log('done...');
-        }
+        skipMessage: true
     });
   });
-  console.log("ARGS SEED", args);
-  console.log("OPTIONS SEED", options);
-  console.log("CONFIG SEED", config);
+
+  this.appName = config.userSetting.appName;
   this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
 };
 
 util.inherits(DefaultSeedGenerator, yeoman.generators.Base);
 
-DefaultSeedGenerator.prototype.askUserFor = function askFor() {
+// add questions...
+/*DefaultSeedGenerator.prototype.askUserFor = function askFor() {
   var cb = this.async();
 
   var prompts = [{
@@ -38,9 +35,8 @@ DefaultSeedGenerator.prototype.askUserFor = function askFor() {
     cb();
   }.bind(this));
 
-};
+};*/
 
 DefaultSeedGenerator.prototype.app = function app() {
-  this.log.ok('YEP ' + this.name);
-  this.copy('index.html', 'www/index.html');
+  this.template('_index.html', 'www/index.html');
 };
