@@ -13,7 +13,7 @@ var DefaultSeedGenerator = module.exports = function DefaultSeedGenerator(args, 
     });
   });
 
-  this.appName = config.userSetting.appName;
+  this.appName = options.userSettings.appName;
   this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
 };
 
