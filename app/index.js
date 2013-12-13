@@ -9,10 +9,15 @@ var DefaultSeedGenerator = module.exports = function DefaultSeedGenerator(args, 
   this.on('end', function () {
     this.installDependencies({
         skipInstall: true,
-        skipMessage: ''
+        skipMessage: true,
+        callback: function () {
+            console.log('done...');
+        }
     });
   });
-
+  console.log("ARGS SEED", args);
+  console.log("OPTIONS SEED", options);
+  console.log("CONFIG SEED", config);
   this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
 };
 
