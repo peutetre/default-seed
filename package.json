@@ -1,6 +1,6 @@
 {
   "name": "generator-default-seed",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "a default project seed for generator-mobile-app",
   "main": "app/index.js",
   "repository": {
@@ -8,10 +8,7 @@
     "url": "git://github.com/peutetre/default-seed.git"
   },
   "dependencies": {
-    "yeoman-generator": "peutetre/generator"
-  },
-  "peerDependencies": {
-    "yo": ">=1.0.0-rc.1"
+    "yeoman-generator": "0.14.2"
   },
   "author": "Paul Panserrieu <paul@42loops.com> (http://42loops.com)",
   "license": "MIT",
