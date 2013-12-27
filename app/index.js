@@ -6,13 +6,6 @@ var util = require('util'),
 var DefaultSeedGenerator = module.exports = function DefaultSeedGenerator(args, options, config) {
     yeoman.generators.Base.apply(this, arguments);
 
-    this.on('end', function () {
-        this.installDependencies({
-            skipInstall: true,
-            skipMessage: true
-        });
-    });
-
     // add all user settings from generator-mobile-app
     for (var setting in options.userSettings) {
         this[setting] = options.userSettings[setting];
