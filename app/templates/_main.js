@@ -2,8 +2,10 @@
 
 'use strict';
 
+var context = window.cordova ? 'webview' : 'browser';
+
 function main() {
-    alert('app <%= appName %> is ready!');
+    window.alert('app <%= appName %> is ready!\n Current execution context: ' + context);
 }
 
-window.document.addEventListener(window.Codova ? 'deviceready' : 'DOMContentLoaded', main, false);
+window.document.addEventListener(window.cordova ? 'deviceready' : 'DOMContentLoaded', main, false);
